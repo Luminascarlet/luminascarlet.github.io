@@ -1,0 +1,99 @@
+* {
+    text-align: center;
+}
+
+body {
+font-family: Poppins, sans-serif;
+margin: 0;
+padding: 0;
+background-image: url(/img/Lumina1.png);
+backdrop-filter: blur(5px);
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+
+}
+.containers {
+background-color: rgba(65, 47, 47, 0.763);
+padding: 0px;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+border: 2px solid #3f0c0c;
+width: 600px;
+text-align: center;
+position: relative;
+}
+
+header {
+background-color: #3f0c0c;
+color: rgb(255, 255, 255);
+padding: 1px;
+text-align: center;
+position: relative;
+}
+
+img {
+border-radius: 4px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+margin-top: -15px;
+padding: 2px;
+}
+
+.button {
+    font-family: Poppins;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    color: #3f0c0c;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.containers .btn:hover {
+    background-color: black;
+    color: white;
+  }
+
+.button1 {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+  }
+  
+  .button1:hover {
+    background-color: #3f0c0c;
+    color: white;
+  }
+
+section {
+padding: 2rem;
+margin: 1rem;
+background-color: rgba(0, 0, 0, 0.568);
+color: #ffffff;
+border-radius: 8px;
+border: 3px solid #3f0c0c;
+}
+.contact {
+color: #fff;
+font-size: 14px;
+padding: 7px;
+}
+section p {
+  font-size: 16px;
+}
+
+footer {
+  padding: 3px;
+}
