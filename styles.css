@@ -6,7 +6,7 @@ body {
 font-family: Poppins, sans-serif;
 margin: 0;
 padding: 0;
-background-image: url(/img/Lumina_bg.png);
+background-image: url(/img/Lumina_bgred.png);
 backdrop-filter: blur(5px);
 height: 100vh;
 display: flex;
@@ -18,7 +18,7 @@ background-position: center;
 
 }
 .containers {
-background-color: rgba(47, 55, 65, 0.763);
+background-color: rgba(65, 47, 47, 0.763);
 padding: 0px;
 border-radius: 12px;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -29,7 +29,7 @@ position: relative;
 }
 
 header {
-background-color: #423d86;
+background-color: #863d3d;
 color: rgb(255, 255, 255);
 padding: 0px;
 border-radius: 12px;
@@ -58,10 +58,10 @@ a {
 }
 .button {
     font-family: Poppins;
-    background-color: #423d86;
+    background-color: #863d3d;
     border: none;
     border-radius: 12px;
-    color: #423d86;
+    color: #863d3d;
     padding: 20px 40px;
     text-align: center;
     text-decoration: none;
@@ -78,19 +78,19 @@ a {
   }
 
 .button1 {
-    background-color: #423d86;
+    background-color: #863d3d;
     color: rgb(255, 255, 255);
     display: block;
         border: 2px solid #ffffff00;
   }
 
   .button1:hover {
-    background-color: #736fa5;
+    background-color: #a56f6f;
     color: rgb(255, 255, 255);
   }
 
   .socialbuttons {
-    background-color: #423d86;
+    background-color: #863d3d;
     border-radius: 12px;
     border: 2px solid #ffffff00;
     color: white;
@@ -101,7 +101,7 @@ a {
   }
   
   .socialbuttons:hover {
-    background-color: #736fa5;
+    background-color: #a56f6f;
   }
 
 .tooltip {
@@ -112,7 +112,7 @@ a {
 .tooltip .hovertext {
   visibility: hidden;
   width: 120px;
-  background-color: #736fa5;
+  background-color: #863d3d;
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -134,7 +134,7 @@ a {
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent transparent #647ca0 transparent;
+  border-color: transparent transparent #863d3d transparent;
 }
 
 .tooltip:hover .hovertext {
@@ -174,7 +174,7 @@ color: #ffffff;
 .popup {
   margin: 80px auto;
   padding: 20px;
-  background: #423d86;
+  background: #863d3d;
   border-radius: 5px;
   width: 40%;
   position: relative;
@@ -202,7 +202,7 @@ color: #ffffff;
   color: #ffffff;
 }
 .popup .close:hover {
-  color: #6f67e7;
+  color: #e76767;
 }
 .popup .content {
   max-height: 30%;
