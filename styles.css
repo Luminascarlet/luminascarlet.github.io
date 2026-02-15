@@ -1,0 +1,303 @@
+* {
+    text-align: center;
+}
+
+/* Page opening fade: use a fullscreen fader so body opacity
+   isn't changed (preserves backdrop-filter). */
+.page-fader {
+  position: fixed;
+  inset: 0;
+  background-color: #301e2d;
+  z-index: 9999;
+  transition: opacity 600ms ease;
+}
+.page-fader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Fallback fixed background using html::before (keeps background fixed across browsers) */
+html::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url(/img/Lumina_bgred.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 0;
+  pointer-events: none;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  transform: translateZ(0);
+  will-change: filter, transform;
+}
+.site-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure root elements fill viewport so fixed pseudo-element stays fixed */
+html, body {
+  height: 100%;
+}
+
+/* When JS fallback is active, hide the pseudo-element background */
+html.no-pseudo::before {
+  display: none;
+}
+.site-content {
+  position: relative;
+  z-index: 1;
+}
+
+body {
+font-family: Momo Trust Sans, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #1d1d1d;
+min-height: 150vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.containers {
+background-color: #251723b6;
+padding: 0px;
+border-radius: 12px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+border: 2px solid #301e2d;
+width: 800px;
+text-align: center;
+position: relative;
+}
+
+header {
+background-color: #301e2d;
+color: rgb(255, 255, 255);
+padding: -60px;
+border-radius: 11px;
+text-align: center;
+position: relative;
+}
+
+footer {
+color: white;
+padding-bottom: 20px;
+}
+
+footer p {
+  font-size: 40px;
+}
+
+hr {
+border: 0;
+height: 2px;
+background: #585758;
+}
+
+img {
+border-radius: 120px;
+border: 3px solid #af8f8f;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+transform: translate(-120%, 40%);
+}
+.containers h1 {
+transform: translate(8%, -180%);
+}
+
+.containers h5 {
+  font-weight: 200;
+  font-size: 18px;
+transform: translate(0%, -460%);
+}
+
+h2 {
+margin-top: -15px;
+padding: 2px;
+}
+
+p {
+font-weight: 300;
+font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-family: Poppins, sans-serif;
+}
+.button {
+    font-family: Poppins;
+    background-color: #301e2d;
+    border: none;
+    border-radius: 12px;
+    color: #301e2d;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    margin: 4px 150px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.containers .btn:hover {
+    background-color: black;
+    color: white;
+  }
+
+.button1 {
+    background-color: #301e2d;
+    color: rgb(255, 255, 255);
+    display: block;
+        border: 2px solid #332a31;
+    border-radius: 12px;
+  }
+
+  .button1:hover {
+    background-color: rgb(75, 68, 68);
+    color: rgb(255, 255, 255);
+    border: 2px solid #502e3c00;
+  }
+
+  .socialbuttons {
+    background-color: transparent;
+    border-radius: 10px;
+    border: 2px solid #ffffff00;
+    color: white;
+    padding: 15px 10px;
+    font-size: 35px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .socialbuttons:hover {
+    background-color: #ffffff33;
+  }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .hovertext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #301e2d;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 110%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .hovertext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #301e2d transparent;
+}
+
+.tooltip:hover .hovertext {
+  visibility: visible;
+}
+
+section {
+padding: 0.2rem;
+margin: 1rem;
+color: #ffffff;
+}
+.contact {
+color: #fff;
+font-size: 14px;
+padding: 7px;
+}
+a {
+color: #ffffff;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 80px auto;
+  padding: 20px;
+  background: #301e2d;
+  border-radius: 5px;
+  width: 40%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  font-size: 28px;
+  color: #ffffff;
+}
+
+.popup p {
+  color: white;
+}
+
+.popup .close {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 35px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+}
+.popup .close:hover {
+  color: rgb(104, 104, 104);
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+
+/* Small centered horizontal rule (thin, subtle) */
+hr {
+  border: none;
+  height: 1px;
+  width: 60%;
+  max-width: 480px;
+  margin: 14px auto;
+  background: linear-gradient(to right, rgba(255,255,255,0.06), rgba(255,255,255,0.35), rgba(255,255,255,0.06));
+  border-radius: 1px;
+}
