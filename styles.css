@@ -76,7 +76,7 @@ header {
 background-color: #301e2d;
 color: rgb(255, 255, 255);
 padding: -60px;
-border-radius: 11px;
+border-radius: 12px;
 text-align: center;
 position: relative;
 }
@@ -300,4 +300,5 @@ hr {
   margin: 14px auto;
   background: linear-gradient(to right, rgba(255,255,255,0.06), rgba(255,255,255,0.35), rgba(255,255,255,0.06));
   border-radius: 1px;
+
 }
