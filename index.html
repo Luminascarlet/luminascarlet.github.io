@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My personal webpage">
+        <title>Lumina's vibin!</title>
+        <link rel="icon" href="/img/icon.png" type="image/png">
+        <link rel="stylesheet" href="styles.css">
+        <!-- Use local Font Awesome files -->
+        <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Sans:wght@200..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="page-fader" class="page-fader"></div>
+    <div class="site-content">
+    <div class="containers">
+    <header>
+        <img src="/img/luminapfp.jpg" height="120" width="120">
+            <h1>Lumina's vibin! ✧</h1>
+            <h5>@Luminascarlet</h5>
+    </header>
+    
+    <section id="about">
+        <h2>Hello!</h2>
+        <p>✦₊ casual gamer ・ music producer ・ typography & roblox GFX creator/editor ♡</p>
+        <a href="#aboutme" class="button button1">♡ About Me! ₊✧</a>
+    </section>
+
+    <section id="socials">
+        <div>
+        <div class="tooltip">
+        <button class="socialbuttons"><a href="https://www.x.com/lumiscarlet" target="_blank"><i class="fa-brands fa-twitter"></i> </button></a>
+        <span class="hovertext">Twitter</span>
+        </div>
+        
+        <div class="tooltip">
+        <button class="socialbuttons"><a href="https://www.instagram.com/notlumiscarlet/" target="_blank"><i class="fa-brands fa-instagram"></i></button></a>
+        <span class="hovertext">Instagram</span>
+        </div>
+
+        <div class="tooltip">
+        <button class="socialbuttons"><a href="https://www.roblox.com/users/446430623/profile" target="_blank"><i class="fa-solid fa-r"></i></button></a>
+        <span class="hovertext">Roblox</span>
+        </div>
+
+        <div class="tooltip">
+        <button class="socialbuttons"><a href="https://steamcommunity.com/profiles/76561198869361387/" target="_blank"><i class="fa-brands fa-steam"></i></button></a>
+        <span class="hovertext">Steam</span>
+        </div>
+
+        <div class="tooltip">
+        <button class="socialbuttons"><a href="https://soundcloud.com/lumiscarlet/" target="_blank"><i class="fa-brands fa-soundcloud"></i></button></a>
+        <span class="hovertext">SoundCloud</span>
+        </div>
+        
+        <div class="tooltip">
+        <button class="socialbuttons"><a href="https://www.youtube.com/@Lumiscarlet/" target="_blank"><i class="fa-brands fa-youtube"></i></button></a>
+        <span class="hovertext">YouTube</span>
+        </div>
+
+        <div class="tooltip">
+        <button class="socialbuttons"><a href="https://www.cosmos.so/luminascarlet/" target="_blank"><i class="fa-solid fa-spinner"></i></button></a>
+        <span class="hovertext">Cosmos</span>
+        </div>
+
+</section>
+<footer>
+    <hr>
+    <p>ꨄ</p>
+</footer>
+    </div>
+
+
+    <div id="aboutme" class="overlay">
+	<div class="popup">
+		<h2>About Me!</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<p>Hello, I'm Lumina, you can call me Lumi! I'm a 21 year old casual guy who plays Roblox, enjoys listening to music, and creates typography and roblox GFX stuff. I'm mostly active on Roblox but you can see me on other games too.</p>
+            <p>i love my wife, Aly.</p>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+<script>
+    window.addEventListener('load', function(){
+        var f = document.getElementById('page-fader');
+        if(!f) return;
+        // start fade
+        f.classList.add('hidden');
+        // remove after transition
+        f.addEventListener('transitionend', function(){
+            if(f && f.parentNode) f.parentNode.removeChild(f);
+        });
+                // JS fallback: create a fixed background element and hide the css pseudo background
+                try {
+                    var bg = document.createElement('div');
+                    bg.id = 'bg-fallback';
+                    Object.assign(bg.style, {
+                        position: 'fixed',
+                        top: '0',
+                        left: '0',
+                        width: '100vw',
+                        height: '100vh',
+                        backgroundImage: "url('/img/Lumina_bgred.png')",
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundPosition: 'center center',
+                        zIndex: '0',
+                        pointerEvents: 'none',
+                        filter: 'blur(5px)'
+                    });
+                    // Insert as first child of body so content sits above it
+                    document.body.insertBefore(bg, document.body.firstChild);
+                    // hide the css pseudo-element background
+                    document.documentElement.classList.add('no-pseudo');
+                } catch (e) {
+                    // silent fallback
+                }
+    });
+</script>
+</html>
